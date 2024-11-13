@@ -6,12 +6,12 @@ const Context = () => {
     <>
       <div className="w-[95%] h-[auto] sm:h-[51vh] flex mx-auto gap-10 flex-col sm:flex-row ">
         {/* Div image */}
-        <div className="w-full sm:w-1/2 bg-purple-500 h-full border-2 rounded-lg">
+        <div className="w-full sm:w-1/2 bg-fuschia-800 h-full ">
           <Image
             src={img_context}
             alt="Image dashboard"
-            layout="responsive"
-            className="rounded-lg"
+            responsive
+            className="border-2 rounded-lg"
           />
         </div>
 

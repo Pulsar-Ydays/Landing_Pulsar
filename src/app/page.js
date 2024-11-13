@@ -1,37 +1,40 @@
 "use client";
-import Footer from "./components/Footer";
 import Image from "next/image";
 import Hero from "./components/Hero";
 import Context from "./components/Context";
 import Objectif from "./components/Objectif";
-import { useEffect } from "react";
-import LocomotiveScroll from "locomotive-scroll";
-import "locomotive-scroll/dist/locomotive-scroll.css"; // Chemin correct pour le CSS
+import { useEffect, useRef } from "react";
+import "locomotive-scroll/dist/locomotive-scroll.css";
 
 import backgroundHero from "./public/background_img_hero.jpg";
 
 export default function Home() {
+  const scrollRef = useRef(null);
+
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const scrollContainer = document.querySelector("[data-scroll-container]");
-      if (scrollContainer) {
-        const scroll = new LocomotiveScroll({
-          el: scrollContainer,
-          smooth: true,
-        });
+      import("locomotive-scroll").then((LocomotiveScroll) => {
+        // Initialise LocomotiveScroll lorsque le module est chargé et que la page est rendue côté client
+        if (scrollRef.current) {
+          const scroll = new LocomotiveScroll.default({
+            el: scrollRef.current,
+            smooth: true,
+          });
 
-        return () => {
-          scroll.destroy(); // Nettoyage de l'instance lors du démontage
-        };
-      }
+          // Nettoyage de l'instance lors du démontage du composant
+          return () => {
+            if (scroll) scroll.destroy();
+          };
+        }
+      });
     }
   }, []);
-  // Pas de dépendances pour exécuter uniquement au premier rendu
 
   return (
     <>
       <div
         data-scroll-container
+        ref={scrollRef}
         className="min-h-screen bg-gradient-to-b from-fuchsia-800 to-purple-900"
       >
         {/* Background Hero */}
@@ -60,10 +63,9 @@ export default function Home() {
 
         {/* Objectif Section */}
         <section data-scroll-section>
-          <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-purple-900 to-purple-100  ">
+          <div className="min-h-screen items-center justify-center bg-gradient-to-b from-purple-900 to-purple-100  ">
             <Objectif />
           </div>
-          <Footer />
         </section>
       </div>
     </>

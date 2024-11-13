@@ -1,10 +1,12 @@
+import Footer from "./Footer";
+
 const Objectif = () => {
   return (
-    <div className="w-[90%] sm:w-[70%] mx-auto flex flex-col items-center space-y-6 mb-96">
+    <div className="w-[90%] md:w-[80%] sm:w-[70%] mx-auto flex flex-col items-center space-y-8 mb-96">
       {/* Div du haut avec deux sections gauche et droite */}
       <div className="flex w-full flex-col sm:flex-row justify-between space-y-4 sm:space-y-0 sm:space-x-4">
         {/* Div hautgauche */}
-        <div className="flex-1 p-6 border-4 border-purple-500 rounded-lg shadow-md h-[24vh]">
+        <div className="flex-1 p-6 border-4 border-purple-500 rounded-lg shadow-md h-[35vh] flex flex-col justify-center">
           <h2 className="text-xl font-semibold">Wallet sécurisé</h2>
           <p className="mt-2 text-gray-800">
             Gardez vos actifs en toute sécurité, où que vous soyez. Notre wallet
@@ -15,8 +17,8 @@ const Objectif = () => {
         </div>
 
         {/* Div hautdroit */}
-        <div className="flex-1 p-6 border-4 border-purple-500 rounded-lg shadow-md h-[24vh]">
-          <h2 className="text-xl font-semibold">Option de calcul d'impots</h2>
+        <div className="flex-1 p-6 border-4 border-purple-500 rounded-lg shadow-md h-[35vh] flex flex-col justify-center">
+          <h2 className="text-xl font-semibold ">Option de calcul d'impots</h2>
           <p className="mt-2 text-gray-800">
             Calculez vos impôts en un clin d'œil ! Notre outil intuitif
             simplifie les démarches et vous guide pas à pas pour une estimation
@@ -27,7 +29,7 @@ const Objectif = () => {
       </div>
 
       {/* Div du bas centrée */}
-      <div className="w-full p-6 border-4 border-purple-500 rounded-lg shadow-md h-[24vh]">
+      <div className="w-full p-6 border-4 border-purple-500 rounded-lg shadow-md h-[35vh] flex flex-col justify-center">
         <h2 className="text-xl font-semibold">Simplicité beauté</h2>
         <p className="mt-2 text-gray-800">
           Découvrez une interface où élégance et simplicité se rencontrent.
@@ -37,6 +39,7 @@ const Objectif = () => {
           se conjugue à la facilité, tout devient plus simple
         </p>
       </div>
+      <Footer />
     </div>
   );
 };

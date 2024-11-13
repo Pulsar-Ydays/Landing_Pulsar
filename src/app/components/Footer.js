@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="bg-transparant">
-      <div className="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8 lg:pt-24">
+      <div className="mx-auto max-w-screen-xl px-4 pb-6 pt-16 mt-52 mb-44 sm:px-6 lg:px-8 lg:pt-24">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
             <div className="flex justify-center text-teal-600 sm:justify-start flex-row items-center">
@@ -25,7 +25,7 @@ export default function Footer() {
                   href="#"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-teal-700 transition hover:text-teal-700/75"
+                  className="text-purple-900 transition hover:text-purple-800"
                 >
                   <span className="sr-only">Facebook</span>
                   <svg
@@ -48,7 +48,7 @@ export default function Footer() {
                   href="#"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-teal-700 transition hover:text-teal-700/75"
+                  className="text-purple-900 transition hover:text-purple-800"
                 >
                   <span className="sr-only">Instagram</span>
                   <svg
@@ -71,7 +71,7 @@ export default function Footer() {
                   href="#"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-teal-700 transition hover:text-teal-700/75"
+                  className="text-purple-900 transition hover:text-purple-800"
                 >
                   <span className="sr-only">Twitter</span>
                   <svg
@@ -90,7 +90,7 @@ export default function Footer() {
                   href="#"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-teal-700 transition hover:text-teal-700/75"
+                  className="text-purple-900 transition hover:text-purple-800"
                 >
                   <span className="sr-only">GitHub</span>
                   <svg
@@ -113,7 +113,7 @@ export default function Footer() {
                   href="#"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-teal-700 transition hover:text-teal-700/75"
+                  className="text-purple-900 transition hover:text-purple-800"
                 >
                   <span className="sr-only">Dribbble</span>
                   <svg
@@ -165,7 +165,7 @@ export default function Footer() {
               <span className="block sm:inline">All rights reserved.</span>
 
               <a
-                className="inline-block text-teal-600 underline transition hover:text-teal-600/75"
+                className="inline-block text-purple-900 underline transition hover:text-purple-800"
                 href="#"
               >
                 Terms & Conditions
@@ -174,7 +174,7 @@ export default function Footer() {
               <span>&middot;</span>
 
               <a
-                className="inline-block text-teal-600 underline transition hover:text-teal-600/75"
+                className="inline-block text-purple-900 underline transition hover:text-purple-800"
                 href="#"
               >
                 Privacy Policy
