@@ -6,7 +6,7 @@ import Objectif from "./components/Objectif";
 import { useEffect, useRef } from "react";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 
-import backgroundHero from "./public/background_img_hero.jpg";
+import backgroundHero from "../../Public/background_img_hero.jpg";
 
 export default function Home() {
   const scrollRef = useRef(null);

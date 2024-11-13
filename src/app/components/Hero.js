@@ -1,7 +1,6 @@
 import "../../styles/globals.css";
 import { useState } from "react";
 import Image from "next/image";
-import logoPulsar from "../public/logoPulsar.png";
 
 const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -39,7 +38,7 @@ const Hero = () => {
       {/* Div droite */}
       <div className="flex justify-center items-center md:w-1/3 md:ml-4 md:mr-4">
         <Image
-          src={logoPulsar}
+          src={"/Logo_Pulsar.png"}
           alt="Image à droite"
           width={400}
           height={400}
