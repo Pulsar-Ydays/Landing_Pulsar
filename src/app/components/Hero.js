@@ -16,11 +16,11 @@ const Hero = () => {
   // Fonction de soumission
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Email envoyé :", email); // Récupération de l'email côté front
-    setIsModalOpen(false); // Ferme le modal après soumission
+    console.log("Email envoyé :", email);
+    setIsModalOpen(false);
   };
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center min-h-screen ">
+    <div className="flex flex-col md:flex-row justify-center items-center min-h-screen w-[100%]">
       {/* Div gauche */}
       <div className="flex flex-col items-start space-y-6 text-center md:text-left md:w-1/3 md:mr-4 md:ml-4">
         <h1 className="text-6xl md:text-7xl font-bold">Pulsar</h1>{" "}
@@ -37,8 +37,8 @@ const Hero = () => {
         >
           {" "}
           {/* Agrandi le padding et taille du texte */}
-          <span className="absolute inset-0 bg-gradient-to-r from-purple-500 via-transparent to-purple-500 transition-all duration-300 group-hover:scale-110"></span>
-          <span className="relative z-10">GET STARTED</span>
+          <span className="absolute inset-0 bg-gradient-to-r from-purple-600 via-transparent to-purple-600 transition-all duration-300 group-hover:scale-110"></span>
+          <span className="relative z-10 font-bold">GET STARTED</span>
         </button>
       </div>
 
