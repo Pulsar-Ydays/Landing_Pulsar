@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Hero from "./components/Hero";
 import Context from "./components/Context";
+import Objectif from "./components/Objectif";
 import { useEffect } from "react";
 import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css"; // Chemin correct pour le CSS
@@ -49,14 +50,13 @@ export default function Home() {
           </div>
         </section>
         <section data-scroll-section>
-          <div className="min-h-screen flex items-center justify-center bg-gradient-to-t from-purple-900 to-fuchsia-800">
-            <h1 className="text-4xl text-white">Deuxième section</h1>
-            {/* <Context /> */}
+          <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-t from-purple-900 to-fuchsia-800">
+            <Context />
           </div>
         </section>
         <section data-scroll-section>
           <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-purple-900 to-purple-100  ">
-            <h1 className="text-4xl text-white">Troisième section</h1>
+            <Objectif />
           </div>
         </section>
       </div>
