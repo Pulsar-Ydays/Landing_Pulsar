@@ -1,24 +1,64 @@
+"use client";
+
 import Image from "next/image";
+import Hero from "./components/Hero";
+import Context from "./components/Context";
+import { useEffect } from "react";
+import LocomotiveScroll from "locomotive-scroll";
+import "locomotive-scroll/dist/locomotive-scroll.css"; // Chemin correct pour le CSS
+
+import backgroundHero from "./public/background_img_hero.jpg";
 
 export default function Home() {
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const scrollContainer = document.querySelector("[data-scroll-container]");
+      if (scrollContainer) {
+        const scroll = new LocomotiveScroll({
+          el: scrollContainer,
+          smooth: true,
+        });
+
+        return () => {
+          scroll.destroy(); // Nettoyage de l'instance lors du démontage
+        };
+      }
+    }
+  }, []);
+  // Pas de dépendances pour exécuter uniquement au premier rendu
+
   return (
     <>
-      <div>
-        <h1 className="ml-10 mt-16 mb-6 text-3xl italic">
-          Bienvenue chez Pulsar
-        </h1>
-        <p className=" ml-10 mx-auto  text-gray-500">
-          Laissez vous offrir à un océan de découverte
-        </p>
-        <div className="w-full lg:w-1/2 mx-auto rounded-lg overflow-hidden mt-16 ">
+      <div
+        data-scroll-container
+        className="min-h-screen bg-gradient-to-b from-fuchsia-800 to-purple-900"
+      >
+        <section data-scroll-section className="relative min-h-screen">
+          {/* Image en arrière-plan */}
           <Image
-            src="https://media.architecturaldigest.com/photos/6328cd8d04902492a06cc6b8/16:9/w_2560%2Cc_limit/BMG03911.jpg"
-            width={2000}
-            height={1600}
-            alt="Picture of the author"
-            className="mx-auto"
+            src={backgroundHero}
+            alt="Background"
+            fill
+            // style={{ objectFit: "cover" }}
+            quality={100}
+            priority={true}
           />
-        </div>
+
+          <div className="relative z-10 flex items-center justify-center min-h-screen">
+            <Hero />
+          </div>
+        </section>
+        <section data-scroll-section>
+          <div className="min-h-screen flex items-center justify-center bg-gradient-to-t from-purple-900 to-fuchsia-800">
+            <h1 className="text-4xl text-white">Deuxième section</h1>
+            {/* <Context /> */}
+          </div>
+        </section>
+        <section data-scroll-section>
+          <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-purple-900 to-purple-100  ">
+            <h1 className="text-4xl text-white">Troisième section</h1>
+          </div>
+        </section>
       </div>
     </>
   );

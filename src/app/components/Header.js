@@ -2,11 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Header() {
-    return (
-      <>
-        <div className="navbar bg-base-100">
+  return (
+    <>
+      <div className="navbar bg-base-100">
+        <Link href="/">
           <div className="flex bg-transparant items-center">
-          <Image
+            <Image
               src={"/Logo_Pulsar.png"}
               alt="Logo"
               width={60}
@@ -15,7 +16,8 @@ export default function Header() {
             />
             <h1 className="text-xl mt-2">Pulsar</h1>
           </div>
-        </div>
-      </>
-    );
-  }
+        </Link>
+      </div>
+    </>
+  );
+}
