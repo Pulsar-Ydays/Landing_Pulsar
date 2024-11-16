@@ -23,15 +23,15 @@ const Hero = () => {
       {/* Div gauche */}
       <div className="flex flex-col items-start space-y-6 text-center md:text-left md:w-1/3 md:mr-4 md:ml-4">
         <h1 className="text-6xl md:text-7xl font-bold">Pulsar</h1>{" "}
-        <h2 className="text-4xl md:text-5xl text-purple-200">
-          Live the near future
+        <h2 className="text-4xl md:text-5xl text-text">
+          Vivez le futur proche
         </h2>
         <button
           onClick={toggleModal}
-          className="relative overflow-hidden px-10 py-4 rounded-md text-white text-xl"
+          className="relative overflow-hidden px-10 py-4 rounded-md text-text text-xl"
         >
           <span className="absolute inset-0 bg-gradient-to-r from-purple-600 via-transparent to-purple-600 transition-all duration-300 group-hover:scale-110"></span>
-          <span className="relative z-10 font-bold">GET STARTED</span>
+          <span className="relative z-10 font-bold">COMMENCER</span>
         </button>
       </div>
 

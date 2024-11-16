@@ -12,7 +12,9 @@ module.exports = {
       },
       colors: {
         background: "var(--background)",
-        foreground: "var(--foreground)",
+        text: "var(--text)",
+        border: "var(--border)",
+        solid: "var(--solid)",
       },
     },
   },

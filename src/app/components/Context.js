@@ -6,22 +6,19 @@ const Context = () => {
     <>
       <div className="w-[95%] h-[auto] sm:h-[51vh] flex mx-auto gap-10 flex-col sm:flex-row ">
         {/* Div image */}
-        <div className="w-full sm:w-1/2 bg-fuschia-800 h-full ">
+        <div className="w-full sm:w-[53rem] h-full z-10">
           <Image
             src={img_context}
             alt="Image dashboard"
             responsive
-            className="border-2 rounded-lg"
+            className="border-2 border-border rounded-lg"
           />
         </div>
 
         {/* Div texte */}
-        <div className="w-full sm:w-1/2 flex items-center justify-center text-white h-full px-4">
-          <h1 className="text-xl">
-            Avec Pulsar, chaque utilisateur peut explorer un environnement
-            numérique intuitif, centré sur la simplicité et la personnalisation,
-            pour accéder facilement à des solutions pratiques et optimisées pour
-            leurs besoins quotidiens.
+        <div className="w-full sm:w-1/2 flex items-center justify-center text-text h-full px-4">
+          <h1 className="text-[2.5rem] text-right mr-10">
+            Pulsar : Une Expérience Numérique Intuitive et Personnalisée au Quotidien
           </h1>
         </div>
       </div>
