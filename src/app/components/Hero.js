@@ -1,6 +1,8 @@
-import "../../styles/globals.css";
-import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import Logo_Pulsar from "../../../public/Logo_Pulsar.png";
+import "../../styles/globals.css";
 
 const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -23,22 +25,23 @@ const Hero = () => {
       {/* Div gauche */}
       <div className="flex flex-col items-start space-y-6 text-center md:text-left md:w-1/3 md:mr-4 md:ml-4">
         <h1 className="text-6xl md:text-7xl font-bold">Pulsar</h1>{" "}
-        <h2 className="text-4xl md:text-5xl text-text">
-          Vivez le futur proche
+        <h2 className="text-2xl md:text-3xl text-text">
+          Nos actifs, notre priorité{" "}
         </h2>
-        <button
-          onClick={toggleModal}
-          className="relative overflow-hidden px-10 py-4 rounded-md text-text text-xl"
-        >
-          <span className="absolute inset-0 bg-gradient-to-r from-purple-600 via-transparent to-purple-600 transition-all duration-300 group-hover:scale-110"></span>
+        <Link href="https://localhost:3001/">
+          <button
+            className="relative overflow-hidden px-10 py-4 rounded-md text-text text-xl"
+          >
+            <span className="absolute inset-0 bg-gradient-to-r from-purple-600 via-transparent to-purple-600 transition-all duration-300 group-hover:scale-110"></span>
           <span className="relative z-10 font-bold">COMMENCER</span>
         </button>
+        </Link>
       </div>
 
       {/* Div droite */}
       <div className="flex justify-center items-center md:w-1/3 md:ml-4 md:mr-4">
         <Image
-          src={"/Logo_Pulsar.png"}
+          src={Logo_Pulsar}
           alt="Image à droite"
           width={400}
           height={400}

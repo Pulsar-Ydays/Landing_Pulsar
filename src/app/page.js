@@ -1,12 +1,10 @@
 "use client";
-import Image from "next/image";
-import Hero from "./components/Hero";
-import Context from "./components/Context";
-import Objectif from "./components/Objectif";
-import { useEffect, useRef } from "react";
 import "locomotive-scroll/dist/locomotive-scroll.css";
+import { useEffect, useRef } from "react";
+import Context from "./components/Context";
+import Hero from "./components/Hero";
+import Objectif from "./components/Objectif";
 
-import backgroundHero from "../../Public/background_img_hero.jpg";
 
 export default function Home() {
   const scrollRef = useRef(null);

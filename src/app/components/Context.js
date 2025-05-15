@@ -1,5 +1,5 @@
 import Image from "next/image";
-import img_context from "../../../Public/img_context.png";
+import img_context from "../../../public/img_context.png";
 
 const Context = () => {
   return (
@@ -17,8 +17,9 @@ const Context = () => {
 
         {/* Div texte */}
         <div className="w-full sm:w-1/2 flex items-center justify-center text-text h-full px-4">
-          <h1 className="text-[2.5rem] text-right mr-10">
-            Pulsar : Une Expérience Numérique Intuitive et Personnalisée au Quotidien
+          <h1 className="text-3xl mr-10">
+            Pulsar, le tableau de bord crypto qui allie clarté, performance et
+            sécurité pour une gestion simplifiée de vos actifs numériques{" "}
           </h1>
         </div>
       </div>

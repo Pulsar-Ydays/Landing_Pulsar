@@ -1,4 +1,6 @@
+
 import Image from "next/image";
+import Logo_Pulsar from "../../../public/Logo_Pulsar.png";
 
 export default function Footer() {
   return (
@@ -8,7 +10,7 @@ export default function Footer() {
           <div>
             <div className="flex justify-center text-teal-600 sm:justify-start flex-row items-center">
               <Image
-                src={"/Logo_Pulsar.png"}
+                src={Logo_Pulsar}
                 alt="Logo"
                 width={60}
                 height={60}
@@ -25,7 +27,7 @@ export default function Footer() {
                   href="#"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-purple-900 transition hover:text-purple-800"
+                  className="text-white transition hover:text-white"
                 >
                   <span className="sr-only">Facebook</span>
                   <svg
@@ -48,7 +50,7 @@ export default function Footer() {
                   href="#"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-purple-900 transition hover:text-purple-800"
+                  className="text-white transition hover:text-white"
                 >
                   <span className="sr-only">Instagram</span>
                   <svg
@@ -71,7 +73,7 @@ export default function Footer() {
                   href="#"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-purple-900 transition hover:text-purple-800"
+                  className="text-white transition hover:text-white"
                 >
                   <span className="sr-only">Twitter</span>
                   <svg
@@ -90,7 +92,7 @@ export default function Footer() {
                   href="#"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-purple-900 transition hover:text-purple-800"
+                  className="text-white transition hover:text-white"
                 >
                   <span className="sr-only">GitHub</span>
                   <svg
@@ -113,7 +115,7 @@ export default function Footer() {
                   href="#"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-purple-900 transition hover:text-purple-800"
+                  className="text-white transition hover:text-white"
                 >
                   <span className="sr-only">Dribbble</span>
                   <svg
@@ -165,7 +167,7 @@ export default function Footer() {
               <span className="block sm:inline">All rights reserved.</span>
 
               <a
-                className="inline-block text-purple-900 underline transition hover:text-purple-800"
+                className="inline-block text-white underline transition hover:text-white"
                 href="#"
               >
                 Terms & Conditions
@@ -174,7 +176,7 @@ export default function Footer() {
               <span>&middot;</span>
 
               <a
-                className="inline-block text-purple-900 underline transition hover:text-purple-800"
+                className="inline-block text-white underline transition hover:text-white"
                 href="#"
               >
                 Privacy Policy

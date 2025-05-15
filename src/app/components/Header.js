@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Logo_Pulsar from "../../../public/Logo_Pulsar.png";
 
 export default function Header() {
   return (
@@ -8,7 +9,7 @@ export default function Header() {
         <Link href="/">
           <div className="flex bg-transparant items-center">
             <Image
-              src={"/Logo_Pulsar.png"}
+              src={Logo_Pulsar}
               alt="Logo"
               width={40}
               height={40}
